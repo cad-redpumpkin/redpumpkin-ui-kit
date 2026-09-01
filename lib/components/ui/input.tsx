@@ -19,7 +19,7 @@ function Input({ field, className, type, ...props }: InputProps) {
 
   // Determine the actual input type based on password visibility state
   const getInputType = () => {
-    if (type === 'number') return 'text'
+    // if (type === 'number') return 'text'
     if (isPasswordType) return showPassword ? 'text' : 'password'
     return type
   }
@@ -62,7 +62,7 @@ function Input({ field, className, type, ...props }: InputProps) {
         {isPasswordType && (
           <button
             type="button"
-            className="absolute top-1/2 right-3 -translate-y-1/2 rounded-sm text-neutral-500 transition-colors hover:text-neutral-700 focus:ring-2 focus:ring-[#751111]/20 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200"
+            className="absolute top-1/2 right-3 -translate-y-1/2 rounded-sm text-neutral-500 transition-colors hover:text-neutral-700 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200"
             onClick={togglePasswordVisibility}
             aria-label={showPassword ? 'Hide password' : 'Show password'}
             tabIndex={-1} // Prevent tab focus, use mouse/touch only
